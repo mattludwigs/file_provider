@@ -4,9 +4,6 @@ defmodule FileProvider do
   def init(path: path) do
     {:ok, config_path} = Provider.expand_path(path)
 
-    config_path
-    |> File.read!()
-
     if File.exists?(config_path) do
       config_path
       |> File.read!()
