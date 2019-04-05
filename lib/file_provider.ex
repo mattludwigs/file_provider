@@ -17,7 +17,7 @@ defmodule FileProvider do
   end
 
   def persist(config) do
-    Application.put_env(:hello, :the_string, config)
+    Application.put_env(:file_provider, :the_string, config, persistent: true)
     :ok
   end
 end
